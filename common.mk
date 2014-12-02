@@ -23,6 +23,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    memtrack.montblanc
 
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.montblanc
-
-
