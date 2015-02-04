@@ -32,19 +32,18 @@ LOCAL_SRC_FILES := \
     survey.c \
     util.c \
     wowlan.c \
-    version.c \
-    android-nl.c
+    version.c
 
 LOCAL_C_INCLUDES := \
-	$(LOCAL_PATH)/wifi/iw_util \
-	external/libnl-headers
+	$(LOCAL_PATH) \
+	external/libnl/include
 
 LOCAL_CFLAGS := -O2 -g -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs
 LOCAL_CFLAGS += -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -DCONFIG_LIBNL20
 LOCAL_LDFLAGS := -Wl,--no-gc-sections
 LOCAL_MODULE_PATH := $(TARGET_OUT_EXECUTABLES)
 LOCAL_MODULE_TAGS := optional
-LOCAL_STATIC_LIBRARIES := libnl_2 libc libstdc++ libm
+LOCAL_STATIC_LIBRARIES := libnl libc libstdc++ libm
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_MODULE:=iw
 include $(BUILD_EXECUTABLE)
